@@ -1,11 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Card, ListItem, Button, Icon } from 'react-native-elements'
+
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Card><Text>Meet our Staff</Text></Card>
+        <Card><Text>Applegate Apparel</Text></Card>
       </View>
     );
   }
