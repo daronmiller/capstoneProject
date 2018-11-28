@@ -10,7 +10,10 @@ export default class App extends React.Component {
       <Header
         leftComponent={{icon: 'menu',}}
         centerComponent={{text: 'Applegate Family Dentistry'}}
-        rightComponent={<Button title="Login"></Button>}
+        rightComponent={<Button title="Login"></Button>
+    }
+    backgroundColor= '#fff'      
+
         />
 
       
@@ -21,7 +24,7 @@ export default class App extends React.Component {
         </Card>
         <Card title="Staff Biographies"style={styles.cardStyling}>
           <Image style ={styles.imageStyling} source={require('./assets/staff/images/Dr_Applegate.jpg')}/>
-          <Text>Meet the wonderful staff at Applegate Family Dentristry</Text>
+          <Text>Meet the wonderful staff at Applegate Family Dentistry</Text>
           <Button title="Read Staff Biographies"></Button>
           </Card>
         <Card><Text>Applegate Apparel</Text>
@@ -34,14 +37,14 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#Ba0121',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   cardStyling: {
     backgroundColor: '#ef2f24',
     textAlign: 'center',
-    fontSize: 54
+  
 
   },
   headerStyling: {
