@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { Card, ListItem, Button, Icon, Header } from 'react-native-elements'
 
 
@@ -19,9 +19,10 @@ export default class App extends React.Component {
         <Button raised= {true} title="Meet our staff"></Button>
           
         </Card>
-        <Card style={styles.cardStyling}>
-          <Text>Our Staff</Text>
-          <Button title="Meet our staff"></Button>
+        <Card title="Staff Biographies"style={styles.cardStyling}>
+          <Image style ={styles.imageStyling} source={require('./assets/staff/images/Dr_Applegate.jpg')}/>
+          <Text>Meet the wonderful staff at Applegate Family Dentristry</Text>
+          <Button title="Read Staff Biographies"></Button>
           </Card>
         <Card><Text>Applegate Apparel</Text>
         </Card>
@@ -46,5 +47,10 @@ const styles = StyleSheet.create({
   headerStyling: {
     fontSize: 22,
     backgroundColor: '#d11f15'
-  }
+  },
+  imageStyling: {
+    aspectRatio: 1,
+    borderRadius: 50,
+    height: 75
+      }
 });
