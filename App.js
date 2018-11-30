@@ -10,9 +10,8 @@ export default class App extends React.Component {
       <Header
         leftComponent={{icon: 'menu',}}
         centerComponent={{text: 'Applegate Family Dentistry'}}
-        rightComponent={<Button title="Login"></Button>
-    }
-    backgroundColor= '#fff'      
+        rightComponent={<Button title="Login"></Button>}
+        backgroundColor='#fff'      
 
         />
 
