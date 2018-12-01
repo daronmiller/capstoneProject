@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Card, ListItem, Button, Icon, Header } from 'react-native-elements'
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+import StaffPage from './StaffPage';
 
-
-export default class App extends React.Component {
+class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -56,3 +57,17 @@ const styles = StyleSheet.create({
     height: 75
       }
 });
+const navApp = createStackNavigator({
+  Home: HomeScreen,
+  
+},
+{
+  initialRouteName:'Home'
+});
+
+const AppContainer = createAppContainer(navApp);
+export default class App extends React.Component{
+  render(){
+    return <AppContainer />;
+  }
+}
