@@ -1,0 +1,21 @@
+{
+"staff":{
+    
+    "employees":
+    {
+        "name": "Dr. Greg Applegate",
+        "image": "./images/Dr_Applegate.jpg",
+        "biography":"Dr. Greg Applegate is a native of Yorktown and graduated from Yorktown High School. He obtained his Bachelor of Science Degree from Ball State University and his Doctor of Dental Surgery Degree from Indiana University School of Dentistry."
+    },
+        "name": "Kylie",
+        "image": "./images/Employee_Kylie.jpg",
+        "biography": "Kylie is an Expanded Duties Dental Assistant and has worked for Dr. Applegate for 6 years. Kylie is a graduate of Delta High School, and continued her education at Ball State University. In her free time she enjoys spending time with her husband and her 1 year old son. She also enjoys coaching Munciana Volleyball."
+    } 
+    
+
+
+
+}
+
+
+}
