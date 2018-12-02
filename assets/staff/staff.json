@@ -1,6 +1,4 @@
-{
-"staff":{
-    
+{   
     "employees":
     {
         "name": "Dr. Greg Applegate",
@@ -10,12 +8,8 @@
         "name": "Kylie",
         "image": "./images/Employee_Kylie.jpg",
         "biography": "Kylie is an Expanded Duties Dental Assistant and has worked for Dr. Applegate for 6 years. Kylie is a graduate of Delta High School, and continued her education at Ball State University. In her free time she enjoys spending time with her husband and her 1 year old son. She also enjoys coaching Munciana Volleyball."
-    } 
-    
-
-
+        
 
 }
 
 
-}

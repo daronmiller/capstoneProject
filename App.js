@@ -3,18 +3,12 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { Card, ListItem, Button, Icon, Header } from 'react-native-elements'
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import StaffPage from './StaffPage';
+import StaffPageData from './StaffPageData';
 
 class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Header
-        leftComponent={{icon: 'menu',}}
-        centerComponent={{text: 'Applegate Family Dentistry'}}
-        rightComponent={<Button title="Login"></Button>}
-        backgroundColor='#fff'      
-
-        />
 
       
       <Card title="Special Deals" style={styles.cardStyling}>
@@ -25,7 +19,7 @@ class HomeScreen extends React.Component {
         <Card title="Staff Biographies"style={styles.cardStyling}>
           <Image style ={styles.imageStyling} source={require('./assets/staff/images/Dr_Applegate.jpg')}/>
           <Text>Meet the wonderful staff at Applegate Family Dentistry</Text>
-          <Button title="Read Staff Biographies"></Button>
+          <Button title="Read Staff Biographies" onPress={()=> {this.props.navigation.navigate("StaffPage");}}></Button>
           </Card>
         <Card><Text>Applegate Apparel</Text>
         </Card>
@@ -59,6 +53,7 @@ const styles = StyleSheet.create({
 });
 const navApp = createStackNavigator({
   Home: HomeScreen,
+  StaffPage,
   
 },
 {
@@ -68,6 +63,6 @@ const navApp = createStackNavigator({
 const AppContainer = createAppContainer(navApp);
 export default class App extends React.Component{
   render(){
-    return <AppContainer />;
+    return <AppContainer/>;
   }
 }
