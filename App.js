@@ -4,6 +4,7 @@ import { Card, ListItem, Button, Icon, Header } from 'react-native-elements'
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import StaffPage from './StaffPage';
 import StaffPageData from './StaffPageData';
+import Merchandise from './Merchandise';
 
 class HomeScreen extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class HomeScreen extends React.Component {
           <Button title="Read Staff Biographies" onPress={()=> {this.props.navigation.navigate("StaffPage");}}></Button>
           </Card>
         <Card><Text>Applegate Apparel</Text>
+        <Button title="View Our Apparel" onPress={()=>{this.props.navigation.navigate("Merchandise");}}></Button>
         </Card>
       </View>
     );
@@ -54,6 +56,7 @@ const styles = StyleSheet.create({
 const navApp = createStackNavigator({
   Home: HomeScreen,
   StaffPage,
+  Merchandise
   
 },
 {
