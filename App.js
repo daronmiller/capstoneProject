@@ -23,7 +23,7 @@ class HomeScreen extends React.Component {
           <Text>Meet the wonderful staff at Applegate Family Dentistry</Text>
           <Button title="Read Staff Biographies" onPress={()=> {this.props.navigation.navigate("StaffPage");}}></Button>
           </Card>
-        <Card title='Applegate Apparel'>
+        <Card width={250}title='Applegate Apparel'>
         <Button title="View Our Apparel" onPress={()=>{this.props.navigation.navigate("Merchandise");}}></Button>
         </Card>
       </View>
