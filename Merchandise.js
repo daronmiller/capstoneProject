@@ -11,7 +11,7 @@ export default class Merchandise extends React.Component{
             <View style={styles.container}>
                 <Card title={merchandise.item}>
                 <Image source={require('./assets/merchandise/images/shirt_1.png')}></Image>
-                <Text style={styles.priceText}>Price: ${/*merchandise.items[0].price*/} </Text>
+                <Text style={styles.priceText}>Price: ${merchandise.price} </Text>
                 </Card>
                 
                 
