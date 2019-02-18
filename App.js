@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Card, ListItem, Button, Icon, Header } from 'react-native-elements'
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import StaffPage from './StaffPage';
@@ -19,9 +19,80 @@ class HomeScreen extends React.Component {
           <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
         </View>
 
-        <ScrollView><View style={styles.insideContainer}>
+        <View style={styles.insideContainer}>
 
-          <Card title="Special Deals" style={styles.cardStyling}>
+        <View style={styles.homeScreenContainer}>
+            <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("Procedures");}}>
+              <Icon style={styles.icon}
+                name='account-circle'
+                type='material-community'
+                size='60'
+                color='#fff'
+              />
+              <Text style={styles.boxText}>Account</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("StaffPage");}}>
+              <Icon style={styles.icon}
+                name='users'
+                type='font-awesome'
+                size='60'
+                color='#fff'
+              />
+              <Text style={styles.boxText}>Staff</Text>
+            </TouchableOpacity>
+
+          </View>
+
+          <View style={styles.homeScreenContainer}>
+            <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("Procedures");}}>
+              <Icon style={styles.icon}
+                name='tooth'
+                type='material-community'
+                size='60'
+                color='#fff'
+              />
+              <Text style={styles.boxText}>Procedures</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Merchandise");}}>
+            <Icon style={styles.icon} 
+                name='new'
+                type='entypo'
+                size='60'
+                color='#fff'
+              />
+              <Text style={styles.boxText}>Deals</Text>
+            </TouchableOpacity>
+
+          </View>
+
+          <View style={styles.homeScreenContainer}>
+
+          <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Merchandise");}}>
+            <Icon style={styles.icon} 
+                name='tshirt-crew'
+                type='material-community'
+                size='60'
+                color='#fff'
+              />
+              <Text style={styles.boxText}>Merchandise</Text>
+            </TouchableOpacity>  
+          
+          <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Merchandise");}}>
+            <Icon style={styles.icon} 
+                name='info-with-circle'
+                type='entypo'
+                size='60'
+                color='#fff'
+              />
+              <Text style={styles.boxText}>Information</Text>
+            </TouchableOpacity>
+            
+
+          </View>
+
+          {/* <Card title="Special Deals" style={styles.cardStyling}>
               <Text>Check out what specials and discounts we're offering on procedures</Text>
               <Button raised= {true} title= "View Available Procedures" onPress={()=>{this.props.navigation.navigate('Procedures')}}></Button>
           </Card>
@@ -35,9 +106,9 @@ class HomeScreen extends React.Component {
           <Card title='Applegate Apparel' style={styles.cardStyling}>
             <Text>Take a look at some Applegate merchandise</Text>
             <Button title="View Our Apparel" onPress={()=>{this.props.navigation.navigate("Merchandise");}}></Button>
-          </Card>
+          </Card> */}
         
-          </View></ScrollView>
+          </View>
       </View>
     );
   }
@@ -50,15 +121,18 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   insideContainer: {
-    backgroundColor: '#Ba0121',
+    flex: 2,
+    backgroundColor: '#fff',
     justifyContent: 'flex-start',
+    paddingTop: 10,
+    alignItems: 'stretch'
   },
-  cardStyling: {
-    textAlign: 'center',
-    alignItems: 'stretch',
-    flexDirection: 'row'
+  // cardStyling: {
+  //   textAlign: 'center',
+  //   alignItems: 'stretch',
+  //   flexDirection: 'row'
 
-  },
+  // },
   headerStyling: {
     fontSize: 22,
     backgroundColor: '#d11f15',
@@ -69,7 +143,7 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     height: 75,
     alignItems: 'center',
-      },
+  },
   bannerImage: {
       height: 145,
       width: "100%",
@@ -78,6 +152,31 @@ const styles = StyleSheet.create({
   banner: {
     backgroundColor: "#fff",
     alignItems: "stretch",
+  },
+  homeScreenContainer: {
+    flexDirection: 'row',
+    backgroundColor: 'transparent',
+    height: '27%',
+    width: '100%',
+    justifyContent: 'space-evenly',
+    //padding: 10,
+  },
+  homeScreenBox: {
+    backgroundColor: '#e62e00',
+    height: 180,
+    width: '49%',
+    borderWidth: 1,
+    borderColor: "#fff",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+  },
+  icon: {
+    alignSelf:"center",
+  },
+  boxText: {
+    paddingBottom: 10,
+    fontSize: 22,
+    color: "#fff"
   }
 });
 const navApp = createStackNavigator({
