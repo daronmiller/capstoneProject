@@ -92,21 +92,32 @@ class HomeScreen extends React.Component {
 
           </View>
 
-          {/* <Card title="Special Deals" style={styles.cardStyling}>
-              <Text>Check out what specials and discounts we're offering on procedures</Text>
-              <Button raised= {true} title= "View Available Procedures" onPress={()=>{this.props.navigation.navigate('Procedures')}}></Button>
-          </Card>
-
-          <Card title="Staff Biographies"style={styles.cardStyling}>
-             <Image style ={styles.imageStyling} source={require('./assets/staff/images/Dr_Applegate.jpg')}/>
-              <Text>Meet the wonderful staff at Applegate Family Dentistry</Text>
-              <Button title="Read Staff Biographies" onPress={()=> {this.props.navigation.navigate("StaffPage");}}></Button>
-          </Card>
-
-          <Card title='Applegate Apparel' style={styles.cardStyling}>
-            <Text>Take a look at some Applegate merchandise</Text>
-            <Button title="View Our Apparel" onPress={()=>{this.props.navigation.navigate("Merchandise");}}></Button>
-          </Card> */}
+          <View style={styles.bottomView}>
+            <Icon style={styles.bottomIcon}
+              name='twitter-with-circle'
+              type='entypo'
+              size='40'
+              color='#e62e00'
+            />
+            <Icon style={styles.bottomIcon}
+              name='facebook-with-circle'
+              type='entypo'
+              size='40'
+              color='#e62e00'
+            />
+            <Icon style={styles.bottomIcon}
+              name='instagram-with-circle'
+              type='entypo'
+              size='40'
+              color='#e62e00'
+            />
+            <Icon style={styles.bottomIcon}
+              name='globe'
+              type='entypo'
+              size='40'
+              color='#e62e00'
+            />
+          </View>
         
           </View>
       </View>
@@ -124,15 +135,9 @@ const styles = StyleSheet.create({
     flex: 2,
     backgroundColor: '#fff',
     justifyContent: 'flex-start',
-    paddingTop: 10,
+    paddingTop: 20,
     alignItems: 'stretch'
   },
-  // cardStyling: {
-  //   textAlign: 'center',
-  //   alignItems: 'stretch',
-  //   flexDirection: 'row'
-
-  // },
   headerStyling: {
     fontSize: 22,
     backgroundColor: '#d11f15',
@@ -145,7 +150,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   bannerImage: {
-      height: 145,
+      height: 150,
       width: "100%",
       marginTop: 35,
   },
@@ -177,7 +182,23 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     fontSize: 22,
     color: "#fff"
-  }
+  },
+  priceText:{
+    fontSize: 22
+},
+containerBanner: {
+flex: 1,
+backgroundColor: '#Ba0121',
+alignItems: 'stretch',
+justifyContent: 'flex-start',
+flexDirection: 'column'
+},
+bottomView: {
+  flexDirection: "row",
+  justifyContent: "space-evenly",
+  paddingTop: 40,
+  alignItems: "center"
+}
 });
 const navApp = createStackNavigator({
   Home: HomeScreen,

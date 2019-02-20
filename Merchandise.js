@@ -2,7 +2,6 @@ import React from 'react';
 import {Text, View, ScrollView, StyleSheet, Image} from 'react-native';
 import {Card} from 'react-native-elements'; 
 
-
 export default class Merchandise extends React.Component{
     static navigationOptions = {
         header: null,
