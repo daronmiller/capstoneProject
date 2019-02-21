@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Linking, Image, TouchableOpacity } from 'react-native';
 import { Card, ListItem, Button, Icon, Header } from 'react-native-elements'
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import StaffPage from './StaffPage';
 import StaffPageData from './StaffPageData';
 import Merchandise from './Merchandise';
 import Procedures from './Procedures';
+import InfoPage from './InfoPage';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -79,7 +80,7 @@ class HomeScreen extends React.Component {
               <Text style={styles.boxText}>Merchandise</Text>
             </TouchableOpacity>  
           
-          <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Merchandise");}}>
+          <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("InfoPage");}}>
             <Icon style={styles.icon} 
                 name='info-with-circle'
                 type='entypo'
@@ -93,25 +94,26 @@ class HomeScreen extends React.Component {
           </View>
 
           <View style={styles.bottomView}>
-            <Icon style={styles.bottomIcon}
+            
+            <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://twitter.com/ApplegateFamDen');}}
               name='twitter-with-circle'
               type='entypo'
               size='40'
               color='#e62e00'
             />
-            <Icon style={styles.bottomIcon}
+            <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://www.facebook.com/Applegate-Family-Dentistry-418702484845584/');}}
               name='facebook-with-circle'
               type='entypo'
               size='40'
               color='#e62e00'
             />
-            <Icon style={styles.bottomIcon}
+            <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://www.instagram.com/applegate_family_dentistry/');}}
               name='instagram-with-circle'
               type='entypo'
               size='40'
               color='#e62e00'
             />
-            <Icon style={styles.bottomIcon}
+            <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('http://www.applegatefamilydentist.com');}}
               name='globe'
               type='entypo'
               size='40'
@@ -179,20 +181,10 @@ const styles = StyleSheet.create({
     alignSelf:"center",
   },
   boxText: {
-    paddingBottom: 10,
+    paddingBottom: 20,
     fontSize: 22,
     color: "#fff"
   },
-  priceText:{
-    fontSize: 22
-},
-containerBanner: {
-flex: 1,
-backgroundColor: '#Ba0121',
-alignItems: 'stretch',
-justifyContent: 'flex-start',
-flexDirection: 'column'
-},
 bottomView: {
   flexDirection: "row",
   justifyContent: "space-evenly",
@@ -204,8 +196,8 @@ const navApp = createStackNavigator({
   Home: HomeScreen,
   StaffPage,
   Merchandise, 
-  Procedures
-  
+  Procedures,
+  InfoPage
 },
 {
   initialRouteName:'Home'
