@@ -31,7 +31,7 @@
          <ScrollView ><View style={styles.insideContainer}>
          <Card title="Dr. Greg Applegate"style={styles.cardStyling}>
          <Image style ={styles.imageStyling} source={require('./assets/staff/images/Dr_Applegate.jpg')}/>
-         <Text>Dr. Greg Applegate is a native of Yorktown and graduated from Yorktown High School. He obtained his Bachelor of Science Degree from Ball State University and his Doctor of Dental Surgery Degree from Indiana University School of Dentistry.</Text>
+         <Text style={styles.bioText}>Dr. Greg Applegate is a native of Yorktown and graduated from Yorktown High School. He obtained his Bachelor of Science Degree from Ball State University and his Doctor of Dental Surgery Degree from Indiana University School of Dentistry.</Text>
          
          </Card>
          <Card title="Kylie"style={styles.cardStyling}>
@@ -52,7 +52,7 @@
         justifyContent: 'flex-start',
       },
     bioText:{
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
     },
     containerBanner: {
         flex: 1,
