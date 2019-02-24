@@ -101,7 +101,8 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 18,
-        paddingLeft: 5
+        paddingLeft: 5,
+        alignSelf: "center"
     },
     topImage: {
         width: "95%",

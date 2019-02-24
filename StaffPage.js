@@ -14,10 +14,13 @@
             .catch(error=>{
                 console.error(error);
             });
-         }
-     componentDidMount() {
-         this.getEmployeeData();
-     }*/
+         }*/
+    //  componentDidMount() {
+    //      //this.getEmployeeData();
+    //      Font.loadAsync({
+    //       'calibri': require('./assets/fonts/Calibri.ttf'),
+    //     });
+    //  }
      static navigationOptions = {
         header: null,
       };
@@ -53,6 +56,8 @@
       },
     bioText:{
         flexWrap: 'wrap',
+        paddingTop: 10
+        //fontFamily: "calibri"
     },
     containerBanner: {
         flex: 1,
