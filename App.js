@@ -27,7 +27,7 @@ class HomeScreen extends React.Component {
               <Icon style={styles.icon}
                 name='account-circle'
                 type='material-community'
-                size='60'
+                size={60}
                 color='#fff'
               />
               <Text style={styles.boxText}>Account</Text>
@@ -37,7 +37,7 @@ class HomeScreen extends React.Component {
               <Icon style={styles.icon}
                 name='users'
                 type='font-awesome'
-                size='60'
+                size={60}
                 color='#fff'
               />
               <Text style={styles.boxText}>Staff</Text>
@@ -50,7 +50,7 @@ class HomeScreen extends React.Component {
               <Icon style={styles.icon}
                 name='tooth'
                 type='material-community'
-                size='60'
+                size={60}
                 color='#fff'
               />
               <Text style={styles.boxText}>Procedures</Text>
@@ -60,7 +60,7 @@ class HomeScreen extends React.Component {
             <Icon style={styles.icon} 
                 name='new'
                 type='entypo'
-                size='60'
+                size={60}
                 color='#fff'
               />
               <Text style={styles.boxText}>Deals</Text>
@@ -74,7 +74,7 @@ class HomeScreen extends React.Component {
             <Icon style={styles.icon} 
                 name='tshirt-crew'
                 type='material-community'
-                size='60'
+                size={60}
                 color='#fff'
               />
               <Text style={styles.boxText}>Merchandise</Text>
@@ -84,7 +84,7 @@ class HomeScreen extends React.Component {
             <Icon style={styles.icon} 
                 name='info-with-circle'
                 type='entypo'
-                size='60'
+                size={60}
                 color='#fff'
               />
               <Text style={styles.boxText}>Information</Text>
@@ -98,25 +98,25 @@ class HomeScreen extends React.Component {
             <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://twitter.com/ApplegateFamDen');}}
               name='twitter-with-circle'
               type='entypo'
-              size='40'
+              size={40}
               color='#e62e00'
             />
             <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://www.facebook.com/Applegate-Family-Dentistry-418702484845584/');}}
               name='facebook-with-circle'
               type='entypo'
-              size='40'
+              size={40}
               color='#e62e00'
             />
             <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://www.instagram.com/applegate_family_dentistry/');}}
               name='instagram-with-circle'
               type='entypo'
-              size='40'
+              size={40}
               color='#e62e00'
             />
             <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('http://www.applegatefamilydentist.com');}}
               name='globe'
               type='entypo'
-              size='40'
+              size={40}
               color='#e62e00'
             />
           </View>
