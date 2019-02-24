@@ -56,13 +56,13 @@
     },
     containerBanner: {
         flex: 1,
-        backgroundColor: '#Ba0121',
+        backgroundColor: '#e62e00',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
         flexDirection: 'column'
     },
     insideContainer: {
-        backgroundColor: '#Ba0121',
+        backgroundColor: '#e62e00',
         justifyContent: 'flex-start',
       },
     banner: {
@@ -74,20 +74,18 @@
         width: "100%",
         marginTop: 35,
     },
-      imageStyling: {
-        aspectRatio: 1,
-        borderRadius: 50,
-        height: 75,
-        alignItems: 'center',
-        
-    
-          },
-          cardStyling: {
-            textAlign: 'center',
-            alignItems: 'center',
-            flexDirection: 'row'
-        
-          }
+  imageStyling: {
+    flex: 1,
+    width: "100%",
+    height: 150,
+    resizeMode: 'contain'
+  },
+  cardStyling: {
+    textAlign: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
+
+  }
 });
 
  module.export = StaffPage;
