@@ -1,7 +1,8 @@
  import React from 'react';
- import {Text, View,StyleSheet, Image, ScrollView} from 'react-native';
+ import {Text, View,StyleSheet, Image, ScrollView, FlatList} from 'react-native';
  import {Card} from 'react-native-elements';
- import StaffPageData from './StaffPageData'
+ import StaffPageData from './StaffPageData';
+ import zData from "./assets/staff/staff.json"
 
  export default class StaffPage extends React.Component {
 
@@ -31,18 +32,16 @@
             <View style={styles.banner}>
             <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
             </View>
-         <ScrollView ><View style={styles.insideContainer}>
-         <Card title="Dr. Greg Applegate"style={styles.cardStyling}>
-         <Image style ={styles.imageStyling} source={require('./assets/staff/images/Dr_Applegate.jpg')}/>
-         <Text style={styles.bioText}>Dr. Greg Applegate is a native of Yorktown and graduated from Yorktown High School. He obtained his Bachelor of Science Degree from Ball State University and his Doctor of Dental Surgery Degree from Indiana University School of Dentistry.</Text>
-         
-         </Card>
-         <Card title="Kylie"style={styles.cardStyling}>
-         
-         <Image style ={styles.imageStyling} source={require('./assets/staff/images/Employee_Kylie.jpg')}/>
-         <Text style={styles.bioText}>Kylie is an Expanded Duties Dental Assistant and has worked for Dr. Applegate for 6 years. Kylie is a graduate of Delta High School, and continued her education at Ball State University. In her free time she enjoys spending time with her husband and her 1 year old son. She also enjoys coaching Munciana Volleyball.</Text>
-         
-         </Card></View></ScrollView>
+         <ScrollView ><FlatList
+  data={zData}
+  renderItem={({item}) => <View><Text>{item.name}</Text>
+  <Image style={{width: 100}} source={{ uri: item.image_uri}}/>
+  <Text>{item.email}</Text>
+  
+  </View>}
+/>
+           
+         </ScrollView>
          </View>
          )
      }
