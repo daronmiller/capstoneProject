@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text, ScrollView, StyleSheet, View, Image} from 'react-native';
+import {Text, ScrollView, StyleSheet, View, Image, Dimensions} from 'react-native';
 import {Card} from 'react-native-elements';
+import { Video } from 'expo';
  export default class Procedures extends React.Component{
     static navigationOptions = {
         header: null,
       }; 
-    
     render(){
          return(
              <View style={styles.container}>
@@ -16,9 +16,23 @@ import {Card} from 'react-native-elements';
              <ScrollView><View style={styles.insideContainer}>
             <Card title="Tooth Whitening">
                 <Text style={styles.bioText}>Teeth Whitening or “bleaching” is a safe, effective procedure to whiten and brighten your teeth and make you look years younger.</Text>
+                <Video
+	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/Tel-Aviv-Beach.mp4'}}
+	                resizeMode="cover"
+                    isLooping
+                    useNativeControls
+	                style={{ width:350, height: 300 }}
+	                />
             </Card>
             <Card title="Crowns and Bridges">
                 <Text style={styles.bioText}>Crowns and bridges refer to the restoration of teeth using porcelain. Whether covering or capping a tooth (crown) or spanning areas of missing or extracted teeth (bridge), we can meet your needs in this area.</Text>
+                <Video
+	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/4X4-in-Vinyard.mp4'}}
+	                resizeMode="cover"
+                    isLooping
+                    useNativeControls
+	                style={{ width:350, height: 300 }}
+	                />
             </Card>
             <Card title="Teeth Straightening">
                 <Text style={styles.bioText}>Straight teeth give you a great smile and self-confidence. Our office can work with you to explain the options we offer in this area.</Text>
@@ -69,5 +83,5 @@ import {Card} from 'react-native-elements';
         width: "100%",
         marginTop: 35,
     },
-    
+      
 });
