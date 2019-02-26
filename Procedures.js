@@ -15,23 +15,23 @@ import { Video } from 'expo';
 
              <ScrollView><View style={styles.insideContainer}>
             <Card title="Tooth Whitening">
-                <Text style={styles.bioText}>Teeth Whitening or “bleaching” is a safe, effective procedure to whiten and brighten your teeth and make you look years younger.</Text>
+                <Text style={styles.infoText}>Teeth Whitening or “bleaching” is a safe, effective procedure to whiten and brighten your teeth and make you look years younger.</Text>
                 <Video
 	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/Tel-Aviv-Beach.mp4'}}
-	                resizeMode="cover"
+	                resizeMode="contain"
                     isLooping
                     useNativeControls
-	                style={{ width:350, height: 300 }}
+	                style={{ width:"100%", height: 300 }}
 	                />
             </Card>
             <Card title="Crowns and Bridges">
-                <Text style={styles.bioText}>Crowns and bridges refer to the restoration of teeth using porcelain. Whether covering or capping a tooth (crown) or spanning areas of missing or extracted teeth (bridge), we can meet your needs in this area.</Text>
+                <Text style={styles.infoText}>Crowns and bridges refer to the restoration of teeth using porcelain. Whether covering or capping a tooth (crown) or spanning areas of missing or extracted teeth (bridge), we can meet your needs in this area.</Text>
                 <Video
 	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/4X4-in-Vinyard.mp4'}}
-	                resizeMode="cover"
+	                resizeMode="contain"
                     isLooping
                     useNativeControls
-	                style={{ width:350, height: 300 }}
+	                style={{ width:"100%", height: 300 }}
 	                />
             </Card>
             <Card title="Teeth Straightening">
@@ -59,13 +59,13 @@ import { Video } from 'expo';
       },
     containerBanner: {
         flex: 1,
-        backgroundColor: '#Ba0121',
+        backgroundColor: '#e62e00',
         alignItems: 'stretch',
         justifyContent: 'flex-start',
         flexDirection: 'column'
     },
     insideContainer: {
-        backgroundColor: '#Ba0121',
+        backgroundColor: '#e62e00',
         justifyContent: 'flex-start',
       },
     banner: {
@@ -83,5 +83,8 @@ import { Video } from 'expo';
         width: "100%",
         marginTop: 35,
     },
-      
+    infoText: {
+      alignSelf: "center",
+      paddingBottom: 10
+    }
 });
