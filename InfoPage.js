@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+import {Text, View, ScrollView, StyleSheet, Image} from 'react-native';
 import { Icon} from 'react-native-elements'
 
 
@@ -14,11 +14,11 @@ export default class InfoPage extends React.Component{
             <View style={styles.banner}>
             <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
             </View>
-            <Image style ={styles.topImage} source={require('./assets/office.jpg')}></Image>
                 
+            <ScrollView><View style={styles.insideContainer}>
+            <Image style ={styles.topImage} source={require('./assets/office.jpg')}></Image>
 
-            <View style={styles.insideContainer}>
-            <View>
+                
                 <View style={styles.infoEntry}>
                 <Icon 
                     name='phone'
@@ -55,24 +55,36 @@ export default class InfoPage extends React.Component{
                 </Text>
                 </View>
 
-                <Text style={styles.text}>
-                {"\n\n"}Hours: {"\n\n"}
-                Monday         8:00 AM - 5:00 PM{"\n"}
-                Tuesday        8:00 AM - 5:00 PM{"\n"}
-                Wednesday  8:00 AM - 5:00 PM{"\n"}
-                Thursday      8:00 AM - 5:00 PM{"\n"}
-                Friday                    Closed{"\n"}
-                Saturday               Closed{"\n"}
-                Sunday                 Closed{"\n"}
+                <View style={styles.infoEntry}>
+                <Text style={styles.hourEntry}>Hours:</Text>
+                </View>
+
+                <View style={styles.hours}>
+                
+                <Text style={styles.hourEntry}>
+                Monday{"\n"}
+                Tuesday{"\n"}
+                Wednesday{"\n"}
+                Thursday{"\n"}
+                Friday{"\n"}
+                Saturday{"\n"}
+                Sunday{"\n"}
                 </Text>
-                 
+                <Text style={styles.hourEntry}>
+                8:00 AM - 5:00 PM{"\n"}
+                8:00 AM - 5:00 PM{"\n"}
+                8:00 AM - 5:00 PM{"\n"}
+                8:00 AM - 5:00 PM{"\n"}
+                Closed{"\n"}
+                Closed{"\n"}
+                Closed{"\n"}
+                </Text>
                 </View>
                 
                 
 
 
-            </View>
-            </View>
+            </View></ScrollView></View>
         )
     }
 }
@@ -80,15 +92,15 @@ export default class InfoPage extends React.Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#e62e00',
         justifyContent: 'flex-start',
       },
       insideContainer: {
         flex: 2,
-        backgroundColor: '#fff',
-        justifyContent: 'flex-start',
+        backgroundColor: '#e62e00',
+        justifyContent: 'space-between',
         paddingTop: 20,
-        alignItems: 'stretch'
+        alignItems: 'center'
       },
     bannerImage: {
         height: 150,
@@ -100,9 +112,9 @@ const styles = StyleSheet.create({
       alignItems: "stretch",
     },
     text: {
-        fontSize: 18,
+        fontSize: 16,
         paddingLeft: 5,
-        alignSelf: "center"
+        textAlign: "center",
     },
     topImage: {
         width: "95%",
@@ -110,9 +122,21 @@ const styles = StyleSheet.create({
         alignSelf: "center"
     },
     infoEntry: {
+        backgroundColor: "#fff",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "flex-start",
-        paddingTop: 20
+        justifyContent: "center",
+        paddingTop: 20,
+        width: "90%",
+    },
+    hours: {
+        flexDirection: "row",
+        paddingTop: 20,
+        backgroundColor: "#fff",
+    },
+    hourEntry: {
+        width: "45%",
+        fontSize: 18,
+        textAlign: "center",
     }
     })
