@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     topImage: {
-        width: "95%",
+        width: "90%",
         height: 175,
         alignSelf: "center"
     },
