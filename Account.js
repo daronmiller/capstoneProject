@@ -45,11 +45,11 @@ export default class Account extends React.Component {
             <View>
                 <View style={styles.input}>
                     <Text style={styles.label}>Username:</Text>
-                    <TextInput style={styles.textField} value={this.state.username} onChangeText={(username) => this.setState({username})}></TextInput>
+                    <TextInput style={styles.textField} autoCapitalize='none' value={this.state.username} onChangeText={(username) => this.setState({username})}></TextInput>
                 </View>
                 <View style={styles.input}>
                     <Text style={styles.label}>Password:</Text>
-                    <TextInput style={styles.textField} secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
+                    <TextInput style={styles.textField} autoCapitalize='none' secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
                 </View>
                 <View>
                 <Button backgroundColor= '#e62e00' style={styles.loginButton} onPress={this.login}  title='Login'></Button>
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     },
     textField: {
         width: "75%",
-        backgroundColor: "#faf1f1"
+        backgroundColor: "#faf1f1",
     }
 
 });
