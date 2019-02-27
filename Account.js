@@ -49,12 +49,7 @@ export default class Account extends React.Component {
                     <TextInput style={styles.textField} autoCapitalize='none' secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
                 </View>
                 <View>
-<<<<<<< Updated upstream
                 <Button backgroundColor= '#e62e00' style={styles.loginButton} onPress={this.login}  title='Login'></Button>
-=======
-                    <Text>Password:</Text>
-                    <TextInput secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
->>>>>>> Stashed changes
                 </View>
             </View>
 </View>
