@@ -8,6 +8,7 @@ import Merchandise from './Merchandise';
 import Procedures from './Procedures';
 import InfoPage from './InfoPage';
 import Account from './Account';
+import Deals from './Deals';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -57,7 +58,7 @@ class HomeScreen extends React.Component {
               <Text style={styles.boxText}>Procedures</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Home");}}>
+            <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Deals");}}>
             <Icon style={styles.icon} 
                 name='new'
                 type='entypo'
@@ -199,7 +200,8 @@ const navApp = createStackNavigator({
   Merchandise, 
   Procedures,
   InfoPage,
-  Account
+  Account,
+  Deals
   
 },
 {
