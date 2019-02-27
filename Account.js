@@ -48,7 +48,11 @@ export default class Account extends React.Component {
                     <Text style={styles.label}>Password:</Text>
                     <TextInput style={styles.textField} autoCapitalize='none' secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
                 </View>
+<<<<<<< Updated upstream
                 <View style={{paddingTop: 20}}>
+=======
+                <View>
+>>>>>>> Stashed changes
                 <Button backgroundColor= '#e62e00' style={styles.loginButton} onPress={this.login}  title='Login'></Button>
                 </View>
             </View>
@@ -89,4 +93,3 @@ const styles = StyleSheet.create({
 });
         
 module.export = Account;
- 
