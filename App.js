@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Linking, Image, TouchableOpacity } from 'react-native';
-import { Card, ListItem, Button, Icon, Header } from 'react-native-elements'
+import { StyleSheet, Text, View, Linking, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { Card, ListItem, Button, Icon, Header } from 'react-native-elements';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import StaffPage from './StaffPage';
 import StaffPageData from './StaffPageData';
@@ -9,7 +9,7 @@ import Procedures from './Procedures';
 import InfoPage from './InfoPage';
 import Account from './Account';
 import Deals from './Deals';
-
+import AccountDash from './AccountDashboard';
 class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -17,6 +17,7 @@ class HomeScreen extends React.Component {
   
   render() {
     return (
+      <ScrollView>
       <View style={styles.container}>
         <View style={styles.banner}>
           <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
@@ -124,7 +125,7 @@ class HomeScreen extends React.Component {
           </View>
         
           </View>
-      </View>
+      </View></ScrollView>
     );
   }
 }
@@ -201,7 +202,8 @@ const navApp = createStackNavigator({
   Procedures,
   InfoPage,
   Account,
-  Deals
+  Deals, 
+  AccountDash
   
 },
 {
