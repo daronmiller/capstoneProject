@@ -48,7 +48,7 @@ export default class Account extends React.Component {
                     <Text style={styles.label}>Password:</Text>
                     <TextInput style={styles.textField} autoCapitalize='none' secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
                 </View>
-                <View>
+                <View style={{paddingTop: 20}}>
                 <Button backgroundColor= '#e62e00' style={styles.loginButton} onPress={this.login}  title='Login'></Button>
                 </View>
             </View>
@@ -57,7 +57,6 @@ export default class Account extends React.Component {
 }
 const styles = StyleSheet.create({
     loginButton: {
-        paddingTop: 20,
         width: "90%",
         height: 80,
         alignSelf: "center"

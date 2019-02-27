@@ -31,7 +31,7 @@
             <View style={styles.banner}>
             <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
             </View>
-         <ScrollView ><View style={styles.insideContaine}>
+            <ScrollView ><View style={styles.insideContainer}>
          {/* <FlatList
   data={zData}
   renderItem={({item}) => 
@@ -55,8 +55,8 @@
         <Image style={styles.imageStyling} source={require('./assets/staff/images/Employee_Tasha.jpg')}/>
         <Text style={styles.bioText}>Tasha  is our Office Manager who has recently joined Dr. Applegate and his staff. She is a graduate of Monroe Central High School. In her free time she enjoys spending time with her husband, her 15 year old son, and her 11 year old daughter.</Text>
         </Card>
-        </View>
-         </ScrollView>
+        </View></ScrollView>
+         
          </View>
          )
      }
