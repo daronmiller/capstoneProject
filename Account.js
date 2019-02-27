@@ -12,13 +12,14 @@ var users = {
     "user3"      :  'talk' 
   }
 export default class Account extends React.Component {
-    
+    static navigationOptions = {
+        header: null,
+      };
     constructor(props){
         super(props);
         this.state={
             username: '',
             password:''
-
         }
     }
     
@@ -42,23 +43,27 @@ export default class Account extends React.Component {
           <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
         </View>
             <View>
-                <View>
-                    <Text >Username:</Text>
-                    <TextInput value={this.state.username} onChangeText={(username) => this.setState({username})}></TextInput>
+                <View style={styles.input}>
+                    <Text style={styles.label}>Username:</Text>
+                    <TextInput style={styles.textField} value={this.state.username} onChangeText={(username) => this.setState({username})}></TextInput>
+                </View>
+                <View style={styles.input}>
+                    <Text style={styles.label}>Password:</Text>
+                    <TextInput style={styles.textField} secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
                 </View>
                 <View>
-                    <Text>Password:</Text>
-                    <TextInput value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
+                <Button backgroundColor= '#e62e00' style={styles.loginButton} onPress={this.login}  title='Login'></Button>
                 </View>
-                <Button onPress={this.login} style={styles.loginButton} title='Login' backgroundColor='#e62e00'></Button>
-
             </View>
 </View>
         )}      
 }
 const styles = StyleSheet.create({
     loginButton: {
-        color: '#e62e00',
+        paddingTop: 20,
+        width: "90%",
+        height: 80,
+        alignSelf: "center"
     }, bannerImage: {
         height: 150,
         width: "100%",
@@ -67,8 +72,23 @@ const styles = StyleSheet.create({
     banner: {
       backgroundColor: "#fff",
       alignItems: "stretch",
+      paddingTop: 100
     },
-
+    input: {
+        flexDirection: "row",
+        height: 50,
+        paddingTop: 10,
+        paddingLeft: 5,
+        justifyContent: "flex-start"
+    },
+    label: {
+        width: "20%",
+        paddingTop: 10
+    },
+    textField: {
+        width: "75%",
+        backgroundColor: "#faf1f1"
+    }
 
 });
         
