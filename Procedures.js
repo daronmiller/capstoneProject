@@ -17,7 +17,7 @@ import { Video } from 'expo';
             <Card title="Tooth Whitening">
                 <Text style={styles.infoText}>Teeth Whitening or “bleaching” is a safe, effective procedure to whiten and brighten your teeth and make you look years younger.</Text>
                 <Video
-	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/Tel-Aviv-Beach.mp4'}}
+	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/best_buddys.mp4'}}
 	                resizeMode="contain"
                     isLooping
                     useNativeControls
@@ -35,14 +35,34 @@ import { Video } from 'expo';
 	                />
             </Card>
             <Card title="Teeth Straightening">
-                <Text style={styles.bioText}>Straight teeth give you a great smile and self-confidence. Our office can work with you to explain the options we offer in this area.</Text>
+                <Text style={styles.infoText}>Straight teeth give you a great smile and self-confidence. Our office can work with you to explain the options we offer in this area.</Text>
+                 <Video
+	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/The-Surfers.mp4'}}
+	                resizeMode="contain"
+                    isLooping
+                    useNativeControls
+	                style={{ width:"100%", height: 300 }}
+	                />
             </Card>
             <Card title="Porcelain Veneers">
                 <Text style={styles.bioText}>Veneers are a cosmetic solution to change your smile by improving their color, size, or shape. Veneers can be done in 2 simple visits.</Text>
+                  <Video
+	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/Tel-Aviv-Beach.mp4'}}
+	                resizeMode="contain"
+                    isLooping
+                    useNativeControls
+	                style={{ width:"100%", height: 300 }}
+	                />
             </Card>
-
             <Card title="Tooth Colored Fillings">
                 <Text style={styles.bioText}>Veneers are a cosmetic solution to change your smile by improving their color, size, or shape. Veneers can be done in 2 simple visits.</Text>
+                  <Video
+	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/Park-from-The-Bridge.mp4'}}
+	                resizeMode="contain"
+                    isLooping
+                    useNativeControls
+	                style={{ width:"100%", height: 300 }}
+	                />
             </Card>
             </View></ScrollView>
             </View>
