@@ -2,10 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Linking, Image, TouchableOpacity, TextInput } from 'react-native';
 import { Card, ListItem,Button, Icon, Header } from 'react-native-elements'
 import {createStackNavigator, createAppContainer} from 'react-navigation';
-import StaffPage from './StaffPage';
-import Merchandise from './Merchandise';
-import Procedures from './Procedures';
-import InfoPage from './InfoPage';
+
 var users = { 
     "user1"  :  "123", 
     "user2"   :  "Shark", 
@@ -28,7 +25,7 @@ export default class Account extends React.Component {
             if(this.state.username in users && this.state.password===users[x]){
                 
                 alert('login successful');
-                this.props.navigation.navigate("Home");
+                this.props.navigation.navigate("AccountDash");
 
             }
         }
@@ -52,7 +49,12 @@ export default class Account extends React.Component {
                     <TextInput style={styles.textField} secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
                 </View>
                 <View>
+<<<<<<< Updated upstream
                 <Button backgroundColor= '#e62e00' style={styles.loginButton} onPress={this.login}  title='Login'></Button>
+=======
+                    <Text>Password:</Text>
+                    <TextInput secureTextEntry={true} value={this.state.password} onChangeText={(password)=>this.setState({password})}></TextInput>
+>>>>>>> Stashed changes
                 </View>
             </View>
 </View>
