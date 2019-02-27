@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
   homeScreenContainer: {
     flexDirection: 'row',
     backgroundColor: 'transparent',
-    height: '27%',
+    height: '38%',
     width: '100%',
     justifyContent: 'space-evenly',
     paddingTop: 3,
