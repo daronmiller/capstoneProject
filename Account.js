@@ -21,7 +21,6 @@ export default class Account extends React.Component {
     }
     
     login = () =>{
-        for(x in users){
             if(this.state.username in users && this.state.password===users[this.state.username]){
                 
                 alert('Login successful');
@@ -29,9 +28,7 @@ export default class Account extends React.Component {
 
             }else{
                 alert('Incorrect username or password')
-            }
-        }
-        
+            }        
     }
 
 
