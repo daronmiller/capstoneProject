@@ -7,7 +7,7 @@ import StaffPageData from './StaffPageData';
 import Merchandise from './Merchandise';
 import Procedures from './Procedures';
 import InfoPage from './InfoPage';
-import Deals from './Deals';
+import Account from './Account';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -24,7 +24,7 @@ class HomeScreen extends React.Component {
         <View style={styles.insideContainer}>
 
         <View style={styles.homeScreenContainer}>
-            <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("Procedures");}}>
+            <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("Account");}}>
               <Icon style={styles.icon}
                 name='account-circle'
                 type='material-community'
@@ -57,7 +57,7 @@ class HomeScreen extends React.Component {
               <Text style={styles.boxText}>Procedures</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Deals");}}>
+            <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Home");}}>
             <Icon style={styles.icon} 
                 name='new'
                 type='entypo'
@@ -199,7 +199,8 @@ const navApp = createStackNavigator({
   Merchandise, 
   Procedures,
   InfoPage,
-  Deals
+  Account
+  
 },
 {
   initialRouteName:'Home'
