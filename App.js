@@ -17,7 +17,6 @@ class HomeScreen extends React.Component {
   
   render() {
     return (
-      <ScrollView>
       <View style={styles.container}>
         <View style={styles.banner}>
           <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
@@ -125,7 +124,7 @@ class HomeScreen extends React.Component {
           </View>
         
           </View>
-      </View></ScrollView>
+      </View>
     );
   }
 }
@@ -166,7 +165,7 @@ const styles = StyleSheet.create({
   homeScreenContainer: {
     flexDirection: 'row',
     backgroundColor: 'transparent',
-    height: '38%',
+    height: '27%',
     width: '100%',
     justifyContent: 'space-evenly',
     paddingTop: 3,
