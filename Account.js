@@ -22,11 +22,13 @@ export default class Account extends React.Component {
     
     login = () =>{
         for(x in users){
-            if(this.state.username in users && this.state.password===users[x]){
+            if(this.state.username in users && this.state.password===users[this.state.username]){
                 
-                alert('login successful');
+                alert('Login successful');
                 this.props.navigation.navigate("AccountDash");
 
+            }else{
+                alert('Incorrect username or password')
             }
         }
         
