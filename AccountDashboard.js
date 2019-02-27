@@ -9,7 +9,8 @@ export default class Account extends React.Component {
 
 
     render(){
-        return(<ScrollView><View style={styles.container}>
+        return(
+        <View style={styles.container}>
             <View style={styles.banner}>
               <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
             </View>
@@ -52,71 +53,19 @@ export default class Account extends React.Component {
     
                 <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Deals");}}>
                 <Icon style={styles.icon} 
-                    name='new'
-                    type='entypo'
-                    size={60}
-                    color='#fff'
-                  />
-                  <Text style={styles.boxText}>Deals</Text>
-                </TouchableOpacity>
-    
-              </View>
-    
-              <View style={styles.homeScreenContainer}>
-    
-              <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Merchandise");}}>
-                <Icon style={styles.icon} 
-                    name='tshirt-crew'
+                    name='settings'
                     type='material-community'
                     size={60}
                     color='#fff'
                   />
-                  <Text style={styles.boxText}>Merchandise</Text>
-                </TouchableOpacity>  
-              
-              <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("InfoPage");}}>
-                <Icon style={styles.icon} 
-                    name='info-with-circle'
-                    type='entypo'
-                    size={60}
-                    color='#fff'
-                  />
-                  <Text style={styles.boxText}>Information</Text>
+                  <Text style={styles.boxText}>Settings</Text>
                 </TouchableOpacity>
-                
     
               </View>
     
-              <View style={styles.bottomView}>
-                
-                <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://twitter.com/ApplegateFamDen');}}
-                  name='twitter-with-circle'
-                  type='entypo'
-                  size={40}
-                  color='#e62e00'
-                />
-                <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://www.facebook.com/Applegate-Family-Dentistry-418702484845584/');}}
-                  name='facebook-with-circle'
-                  type='entypo'
-                  size={40}
-                  color='#e62e00'
-                />
-                <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('https://www.instagram.com/applegate_family_dentistry/');}}
-                  name='instagram-with-circle'
-                  type='entypo'
-                  size={40}
-                  color='#e62e00'
-                />
-                <Icon style={styles.bottomIcon} onPress={()=>{Linking.openURL('http://www.applegatefamilydentist.com');}}
-                  name='globe'
-                  type='entypo'
-                  size={40}
-                  color='#e62e00'
-                />
-              </View>
             
               </View>
-          </View></ScrollView>
+          </View>
         );
       }
     }
@@ -164,7 +113,7 @@ export default class Account extends React.Component {
         },
         homeScreenBox: {
           backgroundColor: '#e62e00',
-          height: 180,
+          height: "100%",
           width: '49%',
           borderWidth: 1,
           borderColor: "#fff",
