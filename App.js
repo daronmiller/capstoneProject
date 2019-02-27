@@ -17,10 +17,6 @@ class HomeScreen extends React.Component {
   
   render() {
     return (
-<<<<<<< Updated upstream
-=======
-      
->>>>>>> Stashed changes
       <View style={styles.container}>
         <View style={styles.banner}>
           <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
