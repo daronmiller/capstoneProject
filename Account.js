@@ -27,7 +27,7 @@ export default class Account extends React.Component {
                 this.props.navigation.navigate("AccountDash");
 
             }else{
-                alert('Incorrect username or password')
+                alert('Incorrect username or password');
             }        
     }
 
