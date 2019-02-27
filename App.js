@@ -168,11 +168,11 @@ const styles = StyleSheet.create({
     height: '27%',
     width: '100%',
     justifyContent: 'space-evenly',
-    //padding: 10,
+    paddingTop: 3,
   },
   homeScreenBox: {
     backgroundColor: '#e62e00',
-    height: 180,
+    height: "100%",
     width: '49%',
     borderWidth: 1,
     borderColor: "#fff",
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
 bottomView: {
   flexDirection: "row",
   justifyContent: "space-evenly",
-  paddingTop: 40,
+  paddingTop: 30,
   alignItems: "center"
 }
 });

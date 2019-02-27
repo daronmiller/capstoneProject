@@ -80,8 +80,8 @@
         flexDirection: 'column'
     },
     insideContainer: {
-        backgroundColor: '#e62e00',
-        justifyContent: 'flex-start',
+      backgroundColor: '#e62e00',
+      justifyContent: 'flex-start',
       },
     banner: {
         backgroundColor: "#fff",
