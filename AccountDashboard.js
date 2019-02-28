@@ -18,7 +18,7 @@ export default class Account extends React.Component {
             <View style={styles.insideContainer}>
     
             <View style={styles.homeScreenContainer}>
-                <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("Account");}}>
+                <TouchableOpacity style={styles.homeScreenBox} >
                   <Icon style={styles.icon}
                     name='credit-card'
                     type='feather'
@@ -28,7 +28,7 @@ export default class Account extends React.Component {
                   <Text style={styles.boxText}>Account Balance</Text>
                 </TouchableOpacity>
     
-                <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("StaffPage");}}>
+                <TouchableOpacity style={styles.homeScreenBox}>
                   <Icon style={styles.icon}
                     name='calendar'
                     type='font-awesome'
@@ -41,7 +41,7 @@ export default class Account extends React.Component {
               </View>
     
               <View style={styles.homeScreenContainer}>
-                <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("Procedures");}}>
+                <TouchableOpacity style={styles.homeScreenBox} >
                   <Icon style={styles.icon}
                     name='exit-to-app'
                     type='materialicons'
@@ -51,7 +51,7 @@ export default class Account extends React.Component {
                   <Text style={styles.boxText}>Logout</Text>
                 </TouchableOpacity>
     
-                <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Deals");}}>
+                <TouchableOpacity style={styles.homeScreenBox} >
                 <Icon style={styles.icon} 
                     name='settings'
                     type='material-community'
