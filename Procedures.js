@@ -45,7 +45,7 @@ import { Video } from 'expo';
 	                />
             </Card>
             <Card title="Porcelain Veneers">
-                <Text style={styles.bioText}>Veneers are a cosmetic solution to change your smile by improving their color, size, or shape. Veneers can be done in 2 simple visits.</Text>
+                <Text style={styles.infoText}>Veneers are a cosmetic solution to change your smile by improving their color, size, or shape. Veneers can be done in 2 simple visits.</Text>
                   <Video
 	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/Tel-Aviv-Beach.mp4'}}
 	                resizeMode="contain"
@@ -55,7 +55,7 @@ import { Video } from 'expo';
 	                />
             </Card>
             <Card title="Tooth Colored Fillings">
-                <Text style={styles.bioText}>Veneers are a cosmetic solution to change your smile by improving their color, size, or shape. Veneers can be done in 2 simple visits.</Text>
+                <Text style={styles.infoText}>Veneers are a cosmetic solution to change your smile by improving their color, size, or shape. Veneers can be done in 2 simple visits.</Text>
                   <Video
 	                source={{uri:'https://storage.googleapis.com/coverr-main/mp4/Park-from-The-Bridge.mp4'}}
 	                resizeMode="contain"

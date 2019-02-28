@@ -44,7 +44,8 @@ container: {
 },
 dealText:{
         fontSize: 16,
-        alignSelf: "center"
+        alignSelf: "center",
+        paddingTop: 10
     },
 insideContainer: {
     flex: 2,
