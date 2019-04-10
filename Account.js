@@ -24,6 +24,7 @@ export default class Account extends React.Component {
             if(this.state.username in users && this.state.password===users[this.state.username]){
                 
                 alert('Login successful');
+                var userToken = this.state.username;
                 this.props.navigation.navigate("AccountDash");
 
             }else{

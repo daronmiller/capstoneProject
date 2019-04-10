@@ -41,8 +41,8 @@ export default class Account extends React.Component {
               </View>
     
               <View style={styles.homeScreenContainer}>
-                <TouchableOpacity style={styles.homeScreenBox} >
-                  <Icon style={styles.icon}
+                <TouchableOpacity style={styles.homeScreenBox} onPress={()=>{this.props.navigation.navigate("Home");}}>
+                  <Icon style={styles.icon} 
                     name='exit-to-app'
                     type='materialicons'
                     size={60}
