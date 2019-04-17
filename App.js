@@ -10,6 +10,7 @@ import InfoPage from './InfoPage';
 import Account from './Account';
 import Deals from './Deals';
 import AccountDash from './AccountDashboard';
+import CareCredit from './CareCredit';
 class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -25,7 +26,7 @@ class HomeScreen extends React.Component {
         <View style={styles.insideContainer}>
 
         <View style={styles.homeScreenContainer}>
-            <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("Account");}}>
+            <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("CareCredit");}}>
               <Icon style={styles.icon}
                 name='account-circle'
                 type='material-community'
@@ -202,7 +203,8 @@ const navApp = createStackNavigator({
   InfoPage,
   Account,
   Deals, 
-  AccountDash
+  AccountDash,
+  CareCredit
   
 },
 {
