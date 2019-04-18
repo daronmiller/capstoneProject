@@ -27,13 +27,16 @@ class HomeScreen extends React.Component {
 
         <View style={styles.homeScreenContainer}>
             <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("CareCredit");}}>
-              <Icon style={styles.icon}
+              {/* <Icon style={styles.icon}
                 name='account-circle'
                 type='material-community'
                 size={60}
                 color='#fff'
-              />
-              <Text style={styles.boxText}>Account</Text>
+              /> */}
+              <Image source={require('./assets/logo.png')} style={styles.icon} style={{ height: 70, width: 90}}>
+
+              </Image>
+              <Text style={styles.boxText}>CareCredit</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("StaffPage");}}>
