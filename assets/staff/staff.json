@@ -1,6 +1,0 @@
-[
-    {"key": "1", "name":"Dr. Greg Applegate", "email": "b@applegate.com", "image_uri": "./assets/staff/images/Dr_Applegate", "bio": "Dr. Greg Applegate is a native of Yorktown and graduated from Yorktown High School. He obtained his Bachelor of Science Degree from Ball State University and his Doctor of Dental Surgery Degree from Indiana University School of Dentistry. After graduating from dental school, Dr. Applegate returned to Muncie to set up his dental practice along with his wife Amy and their three children. Dr. Applegate has proven to excel in a higher standard of patient care and cosmetic dentistry. Through his vision and commitment to advanced education and continued patient care, Dr. Applegate offers his patient’s dentistry of the future."},
-    {"key": "2", "name":"Kylie", "email": "k@d.com","image_uri": "./assets/staff/images/Employee_Kylie", "bio": "Kylie is an Expanded Duties Dental Assistant and has worked for Dr. Applegate for 6 years. Kylie is a graduate of Delta High School, and continued her education at Ball State University. In her free time she enjoys spending time with her husband and her 1 year old son. She also enjoys coaching Munciana Volleyball."},
-    {"key": "3", "name":"Nick", "email":"nsmith@bsu.edu", "image_uri": "./assets/staff/images/Dr_Applegate.png", "bio": "Nick sucks. Periodt."}
-
-]

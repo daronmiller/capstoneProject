@@ -1,12 +1,32 @@
 import React from 'react';
-import {Text, View, ScrollView, StyleSheet, Image} from 'react-native';
-import {Card} from 'react-native-elements'; 
+import {Text, View, ScrollView, StyleSheet, Image, FlatList} from 'react-native';
+import {Card} from 'react-native-elements';
+import dData from "./assets/deals.json";
 
 export default class Deals extends React.Component{
     static navigationOptions = {
         header: null,
       };
 
+    state = {
+        data: []
+    };
+    
+    componentDidMount(){
+        this.fetchData();
+    };
+
+    fetchData = async () => {
+        const response = await fetch(
+          'https://api.jsonbin.io/b/5cc0c65ac40c99367a06949e/latest'
+        , {method: 'GET',
+        headers: {
+            'secret-key': '$2a$10$yiF1mE1laI4/fNgFqptCveTu4B9dyUEmTSDS5gx7hczLUmMDKF/4u'
+        }});
+    
+        const json = await response.json();
+        this.setState({ data: json });
+      };
     render(){
         return(
             <View style={styles.container}>
@@ -14,18 +34,15 @@ export default class Deals extends React.Component{
             <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
             </View>
             <View style={styles.insideContainer}><ScrollView>
-                <Card title="Teeth Whitening" style={styles.card}>
-                <Image source={require('./assets/deals/teethWhitening.jpg')} style={styles.dealsImage}></Image>
-                <Text style={styles.dealText}>Get 15% off a teeth whitening procedure for the entire month of March!</Text>
-                </Card>
+            <FlatList
+                    data={this.state.data}
+                    renderItem={({item}) => 
+                    <Card title={item.title} style={styles.card}>
+                    <Image style={styles.dealsImage} source={{uri: item.url}}/>
+                    <Text style={styles.dealText}>{item.info}</Text>
+                    </Card>}
+                />
 
-                <Card title="Six Month Smile Family BOGO" style={styles.card}>
-                <View style={styles.beforeAfter}>
-                <Image source={require('./assets/deals/6monthBefore.jpg')} style={styles.dealsImage2}></Image>
-                <Image source={require('./assets/deals/6monthAfter.jpg')} style={styles.dealsImage2}></Image>
-                </View>
-                <Text style={styles.dealText}>Sign up for a 6 Month Smile Program with a family member to get 2 for the price of one!</Text>
-                </Card>
                 
                 
 

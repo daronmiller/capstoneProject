@@ -1,10 +1,31 @@
 import React from 'react';
-import {Text, View, ScrollView, StyleSheet, Image} from 'react-native';
-import {Card} from 'react-native-elements'; 
+import {Text, View, ScrollView, StyleSheet, FlatList, Image} from 'react-native';
+import {Card} from 'react-native-elements';
+import mData from "./assets/merchandise.json";
+
 
 export default class Merchandise extends React.Component{
     static navigationOptions = {
         header: null,
+      };
+
+    state = {
+        data: []
+    };
+    componentDidMount(){
+        this.fetchData();
+    };
+
+    fetchData = async () => {
+        const response = await fetch(
+          'https://api.jsonbin.io/b/5cc0cb0cc40c99367a069627/latest'
+        , {method: 'GET',
+        headers: {
+            'secret-key': '$2a$10$yiF1mE1laI4/fNgFqptCveTu4B9dyUEmTSDS5gx7hczLUmMDKF/4u'
+        }});
+    
+        const json = await response.json();
+        this.setState({ data: json });
       };
 
     render(){
@@ -14,33 +35,14 @@ export default class Merchandise extends React.Component{
             <Image style ={styles.bannerImage} source={require('./assets/ApplegateBanner.jpg')}/>
             </View>
             <View style={styles.insideContainer}><ScrollView>
-                <Card title="Shirt 1 (S, M, L, XL)" style={styles.card}>
-                <Image source={require('./assets/merchandise/images/shirt1.jpg')} style={styles.shirtImage}></Image>
-                <Text style={styles.priceText}>Price: $15 </Text>
-                </Card>
-
-                <Card title="Shirt 2 (S, M, L, XL)">
-                <Image source={require('./assets/merchandise/images/shirt2.jpg')} style={styles.shirtImage}></Image>
-                <Text style={styles.priceText}>Price: $15 </Text>
-                </Card>
-
-                <Card title="Shirt 3 (S, M, L, XL)">
-                <Image source={require('./assets/merchandise/images/shirt3.jpg')} style={styles.shirtImage}></Image>
-                <Text style={styles.priceText}>Price: $15 </Text>
-                </Card>
-
-                <Card title="Shirt 4 (S, M, L)">
-                <Image source={require('./assets/merchandise/images/shirt4.jpg')} style={styles.shirtImage}></Image>
-                <Text style={styles.priceText}>Price: $15 </Text>
-                </Card>
-
-                <Card title="Toothbrush">
-                <Image source={require('./assets/merchandise/images/toothbrush.jpg')} style={styles.shirtImage}></Image>
-                <Text style={styles.priceText}>Price: $5 </Text>
-                </Card>
-                
-                
-
+                 <FlatList
+                    data= {this.state.data}
+                    renderItem={({item}) => 
+                    <Card title={item.description} style={styles.card}>
+                    <Image style={styles.shirtImage} source={{uri: item.url}}/>
+                    <Text style={styles.priceText}>{item.price}</Text>
+                    </Card>}
+                /> 
 
             </ScrollView></View>
             </View>
@@ -84,7 +86,7 @@ bannerImage: {
 shirtImage: {
     flex: 1,
     width: "100%",
-    height: 150,
+    height: 300,
     resizeMode: 'contain'
 },
 card: {

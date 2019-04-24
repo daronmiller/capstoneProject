@@ -33,7 +33,7 @@ class HomeScreen extends React.Component {
                 size={60}
                 color='#fff'
               /> */}
-              <Image source={require('./assets/logo.png')} style={styles.icon} style={{ height: 70, width: 90}}>
+              <Image source={require('./assets/logo2.png')} style={styles.icon} style={{ height: 70, width: 90}}>
 
               </Image>
               <Text style={styles.boxText}>CareCredit</Text>
