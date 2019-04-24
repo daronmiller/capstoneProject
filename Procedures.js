@@ -1,7 +1,8 @@
 import React from 'react';
-import {Text, ScrollView, StyleSheet, View, Image, Dimensions} from 'react-native';
+import {Text, ScrollView, StyleSheet, View, Image} from 'react-native';
 import {Card} from 'react-native-elements';
 import { Video } from 'expo';
+
  export default class Procedures extends React.Component{
     static navigationOptions = {
         header: null,

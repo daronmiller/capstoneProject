@@ -1,6 +1,0 @@
-{
-    "item": "Shirt #1",
-    "price": 22.99,
-    "sizes_avail":["S","M","L","XL", "XXL"],
-    "image_src": "./assets/merchandise/images/shirt_1.png"
-}

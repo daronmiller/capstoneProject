@@ -1,8 +1,6 @@
  import React from 'react';
  import {Text, View,StyleSheet, Image, ScrollView, FlatList} from 'react-native';
  import {Card} from 'react-native-elements';
- import sData from "./assets/staff.json";
-
 
  export default class StaffPage extends React.Component {
      static navigationOptions = {
@@ -39,7 +37,7 @@
             <FlatList
                     data={this.state.data}
                     renderItem={({item}) => 
-                    <Card title={item.name} style={styles.cardStyling}>
+                    <Card title={item.name} style={styles.card}>
                     <Image style={styles.imageStyling} source={{uri: item.url}}/>
                     <Text style={styles.bioText}>{item.bio}</Text>
                     </Card>}
@@ -60,14 +58,6 @@
     bioText:{
         flexWrap: 'wrap',
         paddingTop: 10
-        //fontFamily: "calibri"
-    },
-    containerBanner: {
-        flex: 1,
-        backgroundColor: '#e62e00',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
-        flexDirection: 'column'
     },
     insideContainer: {
       flex: 2,
@@ -90,7 +80,7 @@
     height: 150,
     resizeMode: 'contain'
   },
-  cardStyling: {
+  card: {
     textAlign: 'center',
     alignItems: 'center',
     flexDirection: 'row'

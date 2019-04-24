@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Linking, Image, TouchableOpacity, ScrollView } from 'react-native';
-import {Card} from 'react-native-elements'; 
+import { StyleSheet, View, Linking, Image, TouchableOpacity } from 'react-native';
 
 export default class CareCredit extends React.Component{
     static navigationOptions = {

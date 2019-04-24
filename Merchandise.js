@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text, View, ScrollView, StyleSheet, FlatList, Image} from 'react-native';
 import {Card} from 'react-native-elements';
-import mData from "./assets/merchandise.json";
 
 
 export default class Merchandise extends React.Component{
@@ -67,13 +66,6 @@ insideContainer: {
     paddingTop: 20,
     alignItems: 'stretch'
   },
-containerBanner: {
-    flex: 1,
-    backgroundColor: '#Ba0121',
-    alignItems: 'stretch',
-    justifyContent: 'flex-start',
-    flexDirection: 'column'
-    },
     banner: {
         backgroundColor: "#fff",
         alignItems: "stretch",
@@ -94,4 +86,3 @@ card: {
     height: 200
 }
 })
-merchandise = require('./assets/merchandise/merchandise.json');

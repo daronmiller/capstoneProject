@@ -1,16 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View, Linking, Image, TouchableOpacity, ScrollView } from 'react-native';
-import { Card, ListItem, Button, Icon, Header } from 'react-native-elements';
+import { StyleSheet, Text, View, Linking, Image, TouchableOpacity } from 'react-native';
+import { Icon} from 'react-native-elements';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import StaffPage from './StaffPage';
-import StaffPageData from './StaffPageData';
 import Merchandise from './Merchandise';
 import Procedures from './Procedures';
 import InfoPage from './InfoPage';
-import Account from './Account';
 import Deals from './Deals';
-import AccountDash from './AccountDashboard';
 import CareCredit from './CareCredit';
+
 class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -27,12 +25,6 @@ class HomeScreen extends React.Component {
 
         <View style={styles.homeScreenContainer}>
             <TouchableOpacity style={styles.homeScreenBox} onPress={()=> {this.props.navigation.navigate("CareCredit");}}>
-              {/* <Icon style={styles.icon}
-                name='account-circle'
-                type='material-community'
-                size={60}
-                color='#fff'
-              /> */}
               <Image source={require('./assets/logo2.png')} style={styles.icon} style={{ height: 70, width: 90}}>
 
               </Image>
@@ -204,9 +196,7 @@ const navApp = createStackNavigator({
   Merchandise, 
   Procedures,
   InfoPage,
-  Account,
   Deals, 
-  AccountDash,
   CareCredit
   
 },

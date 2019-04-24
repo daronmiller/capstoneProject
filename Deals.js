@@ -1,7 +1,6 @@
 import React from 'react';
 import {Text, View, ScrollView, StyleSheet, Image, FlatList} from 'react-native';
 import {Card} from 'react-native-elements';
-import dData from "./assets/deals.json";
 
 export default class Deals extends React.Component{
     static navigationOptions = {
@@ -71,13 +70,6 @@ insideContainer: {
     paddingTop: 20,
     alignItems: 'stretch'
   },
-containerBanner: {
-    flex: 1,
-    backgroundColor: '#Ba0121',
-    alignItems: 'stretch',
-    justifyContent: 'flex-start',
-    flexDirection: 'column'
-    },
     banner: {
         backgroundColor: "#fff",
         alignItems: "stretch",
@@ -93,19 +85,10 @@ dealsImage: {
     height: 150,
     resizeMode: 'contain'
 },
-dealsImage2: {
-    flex: 1,
-    width: "48%",
-    height: 120,
-    resizeMode: 'contain'
-},
 card: {
     width: "90%",
     height: 200,
     alignItems: "center",
     justifyContent: "center"
-},
-beforeAfter: {
-    flexDirection: "row"
 }
 })
